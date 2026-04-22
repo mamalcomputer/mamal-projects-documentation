@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restrict Incognito Mode Policy</title>
+
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Restrict Incognito Mode Policy</h1>
+    <p>User Configuration Group Policy Documentation</p>
+  </header>
+
+  <main class="main">
+
+    <section class="documentation-section">
+
+      <!-- SIDEBAR (HOME ONLY) -->
+      <aside class="doc-sidebar">
+
+        <h2>Navigation</h2>
+
+        <div class="project-links">
+          <a href="../../index.html">← Back to Home</a>
+        </div>
+
+        <hr>
+
+        <p style="font-size:13px; color:#666;">
+          Browser security policy for disabling private browsing mode.
+        </p>
+
+      </aside>
+
+      <!-- CONTENT -->
+      <div class="doc-content">
+
+        <!-- BACK HOME -->
+        <div class="back-home">
+          <a href="../../index.html">← Back to Home</a>
+        </div>
+
+        <!-- POLICY BLOCK -->
+        <section class="doc-block">
+
+          <h1>Restrict Incognito Mode (Chrome)</h1>
+
+          <h3>Purpose</h3>
+          <p>
+            This policy disables Google Chrome Incognito mode for users in the computer lab environment.
+            It is used to ensure all browsing activity is visible and enforce accountability during system usage.
+          </p>
+
+          <h3>How it works</h3>
+          <p>
+            The Group Policy modifies Chrome settings to disable private browsing mode.
+            Once applied, users will no longer be able to open Incognito windows or bypass browsing restrictions.
+          </p>
+
+          <h3>How it is applied</h3>
+          <ul>
+            <li>Open Group Policy Management Console (GPMC)</li>
+            <li>Edit the User Configuration policy</li>
+            <li>Navigate to: User Configuration → Administrative Templates → Google Chrome → Incognito Mode Availability</li>
+            <li>Set policy to <strong>Disable Incognito Mode</strong></li>
+            <li>Apply changes and run <code>gpupdate /force</code></li>
+          </ul>
+
+          <h3>Impact</h3>
+          <ul>
+            <li>Prevents private browsing in Chrome</li>
+            <li>Ensures full visibility of user activity</li>
+            <li>Supports monitoring and lab discipline</li>
+            <li>Works alongside website blocking policies</li>
+          </ul>
+
+          <h3>Screenshot</h3>
+          <p>Incognito restriction policy in Group Policy Editor:</p>
+
+          <img src="../../images/restrict-incognito-mode-chrome.PNG" class="doc-image" alt="Restrict Incognito Mode Policy Screenshot">
+
+        </section>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
