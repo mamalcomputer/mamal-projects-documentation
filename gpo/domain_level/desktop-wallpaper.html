@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desktop Wallpaper Policy</title>
+
+  <link rel="stylesheet" href="../../styles.css">
+   <link rel="icon" type="image/png" href="./images/title-image.png">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Desktop Wallpaper Policy</h1>
+    <p>Domain Level Group Policy Documentation</p>
+  </header>
+
+  <main class="main">
+
+    <section class="documentation-section">
+
+      <!-- SIMPLE SIDEBAR (HOME ONLY) -->
+      <aside class="doc-sidebar">
+
+        <h2>Navigation</h2>
+
+        <div class="project-links">
+          <a href="../../index.html">← Back to Home</a>
+        </div>
+
+        <hr>
+
+        <p style="font-size:13px; color:#666;">
+          You are viewing a single policy page.
+        </p>
+
+      </aside>
+
+      <!-- CONTENT -->
+      <div class="doc-content">
+
+        <!-- BACK HOME (MAIN ACTION) -->
+        <div class="back-home">
+          <a href="../../index.html">← Back to Home</a>
+        </div>
+
+        <!-- POLICY CARD -->
+        <section class="doc-block">
+
+          <h1>Desktop Wallpaper Group Policy</h1>
+
+          <h3>Purpose</h3>
+          <p>
+            This policy enforces a standard desktop wallpaper across all domain users
+            to maintain branding consistency and prevent unauthorized changes.
+          </p>
+
+          <h3>How it works</h3>
+          <p>
+            The Group Policy Object applies a centralized wallpaper setting from the domain controller.
+            When users log in, Windows retrieves and applies the configured image automatically.
+          </p>
+
+          <h3>How it is applied</h3>
+          <ul>
+            <li>Open Group Policy Management Console (GPMC)</li>
+            <li>Edit the target Domain Policy</li>
+            <li>Navigate to: User Configuration → Administrative Templates → Desktop → Desktop Wallpaper</li>
+            <li>Enable policy and set the image path</li>
+          </ul>
+
+          <h3>Screenshot</h3>
+          <p>Configuration as applied in Active Directory:</p>
+
+          <img src="../../images/desktop-wallpaper.PNG" class="doc-image" alt="Desktop Wallpaper Policy">
+
+        </section>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

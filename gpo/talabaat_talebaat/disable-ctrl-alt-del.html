@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disable Ctrl+Alt+Del Policy</title>
+  <link rel="icon" type="image/png" href="../../images/title-image.png">
+
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Disable Ctrl + Alt + Del Options Policy</h1>
+    <p>Computer & User Configuration Group Policy Documentation</p>
+  </header>
+
+  <main class="main">
+
+    <section class="documentation-section">
+
+      <!-- SIDEBAR (HOME ONLY) -->
+      <aside class="doc-sidebar">
+
+        <h2>Navigation</h2>
+
+        <div class="project-links">
+          <a href="../../index.html">← Back to Home</a>
+        </div>
+
+        <hr>
+
+        <p style="font-size:13px; color:#666;">
+          Security lockdown policy for restricting system access options.
+        </p>
+
+      </aside>
+
+      <!-- CONTENT -->
+      <div class="doc-content">
+
+        <!-- BACK HOME -->
+        <div class="back-home">
+          <a href="../../index.html">← Back to Home</a>
+        </div>
+
+        <!-- POLICY BLOCK -->
+        <section class="doc-block">
+
+          <h1>Disable Ctrl + Alt + Del Options</h1>
+
+          <h3>Purpose</h3>
+          <p>
+            This policy restricts access to the Ctrl + Alt + Del security screen options such as Task Manager, Lock Computer,
+            and other system-level controls. It is used to prevent unauthorized system changes and maintain control over lab machines.
+          </p>
+
+          <h3>How it works</h3>
+          <p>
+            The Group Policy removes or disables access to security options presented after pressing Ctrl + Alt + Del.
+            This prevents users from accessing Task Manager or performing system-level actions that could interfere with lab operations.
+          </p>
+
+          <h3>How it is applied</h3>
+          <ul>
+            <li>Open Group Policy Management Console (GPMC)</li>
+            <li>Edit either Computer Configuration or User Configuration (depending on deployment design)</li>
+            <li>Navigate to: 
+              <strong>User Configuration → Administrative Templates → System → Ctrl+Alt+Del Options</strong>
+            </li>
+            <li>Enable policies such as:
+              <ul>
+                <li>Remove Task Manager</li>
+                <li>Remove Lock Computer</li>
+                <li>Remove Change Password</li>
+              </ul>
+            </li>
+            <li>Apply changes and run <code>gpupdate /force</code></li>
+          </ul>
+
+          <h3>Impact</h3>
+          <ul>
+            <li>Prevents access to Task Manager</li>
+            <li>Restricts system-level user actions</li>
+            <li>Improves lab security and control</li>
+            <li>Reduces risk of process termination or bypass attempts</li>
+          </ul>
+
+          <h3>Screenshot</h3>
+          <p>Ctrl + Alt + Del restriction policy in Group Policy Editor:</p>
+
+          <img src="../../images/disable-ctrl+alt+del-options.PNG" class="doc-image" alt="Disable Ctrl Alt Del Policy Screenshot">
+
+        </section>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

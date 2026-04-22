@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prevent Chrome Extension Installation</title>
+
+  <link rel="stylesheet" href="../../styles.css">
+   <link rel="icon" type="image/png" href="../../images/title-image.png">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Prevent Chrome Extension Installation Policy</h1>
+    <p>User Configuration Group Policy Documentation</p>
+  </header>
+
+  <main class="main">
+
+    <section class="documentation-section">
+
+      <!-- SIDEBAR (HOME ONLY) -->
+      <aside class="doc-sidebar">
+
+        <h2>Navigation</h2>
+
+        <div class="project-links">
+          <a href="../../index.html">← Back to Home</a>
+        </div>
+
+        <hr>
+
+        <p style="font-size:13px; color:#666;">
+          Security policy restricting browser extension installation.
+        </p>
+
+      </aside>
+
+      <!-- CONTENT -->
+      <div class="doc-content">
+
+        <!-- BACK HOME -->
+        <div class="back-home">
+          <a href="../../index.html">← Back to Home</a>
+        </div>
+
+        <!-- POLICY BLOCK -->
+        <section class="doc-block">
+
+          <h1>Prevent Chrome Extension Installation</h1>
+
+          <h3>Purpose</h3>
+          <p>
+            This policy restricts users from installing unauthorized Google Chrome extensions.
+            It is used to enhance security, prevent malicious extensions, and maintain a controlled browsing environment
+            within the computer lab.
+          </p>
+
+          <h3>How it works</h3>
+          <p>
+            The Group Policy enforces restrictions on Chrome extension installation by blocking access
+            to the Chrome Web Store or preventing installation of non-approved extensions.
+            Users are only allowed to use pre-approved extensions defined by the administrator.
+          </p>
+
+          <h3>How it is applied</h3>
+          <ul>
+            <li>Open Group Policy Management Console (GPMC)</li>
+            <li>Edit the User Configuration policy</li>
+            <li>Navigate to: User Configuration → Policies → Administrative Templates → Google Chrome → Extensions</li>
+            <li>Enable policy: <strong>Block installation of extensions</strong></li>
+            <li>Optionally define allowed extension IDs (whitelist)</li>
+            <li>Apply policy and run <code>gpupdate /force</code></li>
+          </ul>
+
+          <h3>Screenshot</h3>
+          <p>Chrome extension restriction policy in Active Directory:</p>
+
+          <img src="../../images/prevent_chrome_extensions_installation.PNG" class="doc-image" alt="Prevent Chrome Extension Installation Screenshot">
+
+        </section>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

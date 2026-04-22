@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prevent Registry Editor Policy</title>
+
+  <link rel="stylesheet" href="../../styles.css">
+   <link rel="icon" type="image/png" href="../../images/title-image.png">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Prevent Registry Editor Policy</h1>
+    <p>User Configuration Group Policy Documentation</p>
+  </header>
+
+  <main class="main">
+
+    <section class="documentation-section">
+
+      <!-- SIDEBAR (HOME ONLY) -->
+      <aside class="doc-sidebar">
+
+        <h2>Navigation</h2>
+
+        <div class="project-links">
+          <a href="../../index.html">← Back to Home</a>
+        </div>
+
+        <hr>
+
+        <p style="font-size:13px; color:#666;">
+          Security restriction applied at user level to prevent system modification.
+        </p>
+
+      </aside>
+
+      <!-- CONTENT -->
+      <div class="doc-content">
+
+        <!-- BACK HOME -->
+        <div class="back-home">
+          <a href="../../index.html">← Back to Home</a>
+        </div>
+
+        <!-- POLICY BLOCK -->
+        <section class="doc-block">
+
+          <h1>Prevent Registry Editor (Regedit) Access</h1>
+
+          <h3>Purpose</h3>
+          <p>
+            This policy disables access to the Windows Registry Editor (regedit.exe) for users.
+            It is used to prevent unauthorized system modifications and protect system stability
+            in a controlled computer lab environment.
+          </p>
+
+          <h3>How it works</h3>
+          <p>
+            When enabled, this Group Policy blocks the execution of Registry Editor.
+            If a user attempts to open regedit, the system silently prevents it or displays a restriction message,
+            depending on configuration settings.
+          </p>
+
+          <h3>How it is applied</h3>
+          <ul>
+            <li>Open Group Policy Management Console (GPMC)</li>
+            <li>Edit the User Configuration policy</li>
+            <li>Navigate to: User Configuration → Policies → Administrative Templates → System</li>
+            <li>Locate <strong>"Prevent access to registry editing tools"</strong></li>
+            <li>Set policy to <strong>Enabled</strong></li>
+            <li>Apply changes and run <code>gpupdate /force</code></li>
+          </ul>
+
+          <h3>Screenshot</h3>
+          <p>Registry restriction policy as configured in Active Directory:</p>
+
+          <img src="../../images/prevent-registry-editing.PNG" class="doc-image" alt="Prevent Registry Editor Policy Screenshot">
+
+        </section>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

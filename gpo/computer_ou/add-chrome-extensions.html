@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Install Approved Chrome Extensions Policy</title>
+
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="icon" type="image/png" href="../../images/title-image.png">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Install Approved Chrome Extensions Policy</h1>
+    <p>Talabaat & Talebaat Group Policy Documentation</p>
+  </header>
+
+  <main class="main">
+
+    <section class="documentation-section">
+
+      <!-- SIDEBAR (HOME ONLY) -->
+      <aside class="doc-sidebar">
+
+        <h2>Navigation</h2>
+
+        <div class="project-links">
+          <a href="../../index.html">← Back to Home</a>
+        </div>
+
+        <hr>
+
+        <p style="font-size:13px; color:#666;">
+          Extension whitelist policy for controlled browser environment.
+        </p>
+
+      </aside>
+
+      <!-- CONTENT -->
+      <div class="doc-content">
+
+        <!-- BACK HOME -->
+        <div class="back-home">
+          <a href="../../index.html">← Back to Home</a>
+        </div>
+
+        <!-- POLICY BLOCK -->
+        <section class="doc-block">
+
+          <h1>Install Approved Chrome Extensions Only</h1>
+
+          <h3>Purpose</h3>
+          <p>
+            This policy ensures that only approved and trusted Google Chrome extensions can be installed by users.
+            It prevents installation of unauthorized or potentially harmful extensions while maintaining necessary functionality
+            for lab activities.
+          </p>
+
+          <h3>How it works</h3>
+          <p>
+            The Group Policy enforces a whitelist of allowed Chrome extensions using extension IDs.
+            Any extension not included in the approved list is automatically blocked from installation or execution.
+          </p>
+
+          <h3>How it is applied</h3>
+          <ul>
+            <li>Open Group Policy Management Console (GPMC)</li>
+            <li>Edit the User Configuration policy</li>
+            <li>Navigate to: User Configuration → Policies → Administrative Templates → Google Chrome → Extensions</li>
+            <li>Enable <strong>Configure extension installation whitelist</strong></li>
+            <li>Add approved extension IDs to the whitelist</li>
+            <li>Optionally block all others using blacklist policy</li>
+            <li>Apply changes and run <code>gpupdate /force</code></li>
+          </ul>
+
+          <h3>Screenshot</h3>
+          <p>Whitelist configuration for Chrome extensions in Active Directory:</p>
+
+          <img src="../../images/install-chrome-extensions1.PNG" class="doc-image" alt="Approved Chrome Extensions Policy Screenshot">
+          <img src="../../images/install-chrome-extensions2.PNG" class="doc-image" alt="Approved Chrome Extensions Policy Screenshot">
+
+        </section>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

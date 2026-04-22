@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Allow PowerShell Scripts - Domain Level</title>
+
+  <link rel="stylesheet" href="../../styles.css">
+   <link rel="icon" type="image/png" href="../../images/title-image.png">
+</head>
+
+<body>
+    <div class="back-home">
+  <a href="../../index.html">← Back to Home</a>
+</div>
+
+<header class="header">
+  <h1>Allow PowerShell Scripts</h1>
+</header>
+
+<main class="main">
+<section class="documentation-section">
+
+  <!-- SIDEBAR (kept minimal for consistency, you can reuse full sidebar later if needed) -->
+  <aside class="doc-sidebar">
+    <h2>Domain Level Policies</h2>
+    <p>Group Policy Management Documentation</p>
+  </aside>
+
+  <!-- CONTENT -->
+  <div class="doc-content">
+
+    <!-- PURPOSE -->
+    <section class="doc-block">
+      <h2>Purpose</h2>
+      <p>
+        This policy allows domain users to execute PowerShell scripts in a controlled environment.
+        It is used to enable automation tasks such as system configuration, user management, and lab administration.
+      </p>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="doc-block">
+      <h2>How It Works</h2>
+      <p>
+        The policy modifies execution restrictions on domain machines by allowing PowerShell script execution
+        through Group Policy settings. It ensures scripts can run without being blocked by default execution policies.
+      </p>
+    </section>
+
+    <!-- APPLICATION -->
+    <section class="doc-block">
+      <h2>How It Is Applied</h2>
+      <p>
+        This policy is applied at the Domain Level using Active Directory Group Policy Management.
+        It affects all computers and users within the configured domain scope.
+      </p>
+    </section>
+
+    <!-- STEPS -->
+    <section class="doc-block">
+      <h2>Configuration Steps</h2>
+      <ol>
+        <li>Open Group Policy Management Console (GPMC)</li>
+        <li>Select the target Domain</li>
+        <li>Create or edit an existing Group Policy Object</li>
+        <li>Navigate to: Computer Configuration → Policies → Administrative Templates → Windows Components → Windows PowerShell</li>
+        <li>Enable “Turn on Script Execution”</li>
+        <li>Select “Allow all scripts” or appropriate security level</li>
+        <li>Apply and update Group Policy using <code>gpupdate /force</code></li>
+      </ol>
+    </section>
+
+    <!-- SCREENSHOT -->
+    <section class="doc-block">
+      <h2>Screenshot</h2>
+      <p>Configuration view inside Group Policy Editor:</p>
+
+      <img src="../../images/allow_domain_users.PNG"
+           alt="Allow PowerShell Script Execution Policy"
+           class="doc-image">
+    </section>
+
+    <!-- NOTES -->
+    <section class="doc-block">
+      <h2>Notes</h2>
+      <p>
+        Enabling PowerShell scripts should be controlled carefully to prevent unauthorized or malicious script execution.
+        It is recommended to restrict access using security filtering or user groups where necessary.
+      </p>
+    </section>
+
+  </div>
+
+</section>
+</main>
+
+</body>
+</html>

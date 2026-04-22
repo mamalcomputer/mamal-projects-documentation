@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Folder Redirection Policy</title>
+
+  <link rel="stylesheet" href="../../styles.css">
+   <link rel="icon" type="image/png" href="../../images/title-image.png">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Folder Redirection Policy</h1>
+    <p>User Configuration Group Policy Documentation</p>
+  </header>
+
+  <main class="main">
+
+    <section class="documentation-section">
+
+      <!-- SIDEBAR (HOME ONLY) -->
+      <aside class="doc-sidebar">
+
+        <h2>Navigation</h2>
+
+        <div class="project-links">
+          <a href="../../index.html">← Back to Home</a>
+        </div>
+
+        <hr>
+
+        <p style="font-size:13px; color:#666;">
+          Applies to user profile data redirection in lab environments.
+        </p>
+
+      </aside>
+
+      <!-- CONTENT -->
+      <div class="doc-content">
+
+        <!-- BACK HOME -->
+        <div class="back-home">
+          <a href="../../index.html">← Back to Home</a>
+        </div>
+
+        <!-- POLICY BLOCK -->
+        <section class="doc-block">
+
+          <h1>Folder Redirection Policy</h1>
+
+          <h3>Purpose</h3>
+          <p>
+            This policy redirects user folders such as Desktop, Documents, and Downloads
+            to a centralized network location. It ensures data consistency, backup reliability,
+            and prevents data loss in shared computer lab environments.
+          </p>
+
+          <h3>How it works</h3>
+          <p>
+            When a user logs in, Windows automatically redirects selected folders from the local machine
+            to a network shared path defined in Active Directory. Any files saved by the user are stored centrally
+            instead of the local computer.
+          </p>
+
+          <h3>How it is applied</h3>
+          <ul>
+            <li>Open Group Policy Management Console (GPMC)</li>
+            <li>Edit the User Configuration policy</li>
+            <li>Navigate to: User Configuration → Policies → Windows Settings → Folder Redirection</li>
+            <li>Select target folders (Documents, Desktop, etc.)</li>
+            <li>Set the network share path (e.g. \\server\users\%username%)</li>
+            <li>Apply and update policy using <code>gpupdate /force</code></li>
+          </ul>
+
+          <h3>Screenshot</h3>
+          <p>Folder Redirection configuration in Active Directory:</p>
+
+          <img src="../../images/folder-redirection.PNG" class="doc-image" alt="Folder Redirection Policy Screenshot">
+
+        </section>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

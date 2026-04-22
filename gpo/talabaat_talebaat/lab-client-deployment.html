@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Client Deployment Policy</title>
+
+  <link rel="stylesheet" href="../../styles.css">
+   <link rel="icon" type="image/png" href="../../images/title-image.png">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Lab Client Deployment Policy</h1>
+    <p>System-wide deployment and restriction configuration</p>
+  </header>
+
+  <main class="main">
+
+    <section class="documentation-section">
+
+      <!-- SIDEBAR (HOME ONLY) -->
+      <aside class="doc-sidebar">
+
+        <h2>Navigation</h2>
+
+        <div class="project-links">
+          <a href="../../index.html">← Back to Home</a>
+        </div>
+
+        <hr>
+
+        <p style="font-size:13px; color:#666;">
+          This policy manages automated lab client deployment and system restrictions.
+        </p>
+
+      </aside>
+
+      <!-- CONTENT -->
+      <div class="doc-content">
+
+        <!-- BACK HOME -->
+        <div class="back-home">
+          <a href="../../index.html">← Back to Home</a>
+        </div>
+
+        <!-- POLICY BLOCK -->
+        <section class="doc-block">
+
+          <h1>Lab Client Deployment Policy</h1>
+
+          <h3>Purpose</h3>
+          <p>
+            This policy ensures automatic deployment of the Lab Client system across all lab machines.
+            It is used to initialize required configurations, scripts, and restrictions during system startup and user login.
+          </p>
+
+          <h3>How it works</h3>
+          <p>
+            The deployment is executed using a centralized batch script located on the network share.
+            It runs at both system startup and user logon to ensure consistency across all machines.
+          </p>
+
+          <h3>Deployment Configuration</h3>
+
+          <ul>
+
+            <li>
+              <strong>Computer Configuration (Startup Script)</strong>
+              <ul>
+                <li>Executes deployment script at system startup</li>
+                <li>Path: <code>\\MAMALAD\Maintenance\LabClient\deploy.bat</code></li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>User Configuration (Logon Script)</strong>
+              <ul>
+                <li>Executes deployment script when a user logs in</li>
+                <li>Ensures user-level configuration is applied correctly</li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Administrative Templates (User Restrictions)</strong>
+              <ul>
+                <li>Remove “Run” menu from Start Menu</li>
+                <li>Remove Task Manager access (Ctrl + Alt + Del options)</li>
+              </ul>
+            </li>
+
+          </ul>
+
+          <h3>System Impact</h3>
+          <p>
+            This policy ensures full control over lab environments by preventing unauthorized execution,
+            restricting system tools, and enforcing consistent deployment across all machines.
+          </p>
+
+          <h3>Screenshot</h3>
+          <p>Deployment and restriction configuration in Group Policy:</p>
+
+          <img src="../../images/lab-client-deploy1.PNG" class="doc-image" alt="Lab Client Deployment Policy Screenshot">
+           <img src="../../images/lab-client-deploy2.PNG" class="doc-image" alt="Lab Client Deployment Policy Screenshot">
+
+        </section>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Block Websites Policy</title>
+  <link rel="icon" type="image/png" href="../../images/title-image.png">
+
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Block Websites Policy</h1>
+    <p>User Configuration Group Policy Documentation</p>
+  </header>
+
+  <main class="main">
+
+    <section class="documentation-section">
+
+      <!-- SIDEBAR (HOME ONLY) -->
+      <aside class="doc-sidebar">
+
+        <h2>Navigation</h2>
+
+        <div class="project-links">
+          <a href="../../index.html">← Back to Home</a>
+        </div>
+
+        <hr>
+
+        <p style="font-size:13px; color:#666;">
+          Web access restriction policy for controlled lab environments.
+        </p>
+
+      </aside>
+
+      <!-- CONTENT -->
+      <div class="doc-content">
+
+        <!-- BACK HOME -->
+        <div class="back-home">
+          <a href="../../index.html">← Back to Home</a>
+        </div>
+
+        <!-- POLICY BLOCK -->
+        <section class="doc-block">
+
+          <h1>Block Restricted Websites Policy</h1>
+
+          <h3>Purpose</h3>
+          <p>
+            This policy blocks access to websites that are not allowed within the computer lab environment.
+            It is used to enforce internet usage rules, improve productivity, and prevent access to inappropriate or distracting content.
+          </p>
+
+          <h3>How it works</h3>
+          <p>
+            The Group Policy restricts web access by applying URL or domain-level blocking rules.
+            When a user attempts to access a restricted website, the browser denies the connection or redirects access to a blocked page.
+          </p>
+
+          <h3>How it is applied</h3>
+          <ul>
+            <li>Open Group Policy Management Console (GPMC)</li>
+            <li>Edit the User Configuration policy</li>
+            <li>Navigate to: User Configuration → Policies → Windows Settings → Name Resolution Policy / Proxy / Chrome Policies</li>
+            <li>Add blocked domains or URL restrictions</li>
+            <li>Apply restriction list for lab environments</li>
+            <li>Run <code>gpupdate /force</code> to apply changes</li>
+          </ul>
+
+          <h3>Commonly Blocked Categories</h3>
+          <ul>
+            <li>Social media platforms</li>
+            <li>Streaming websites</li>
+            <li>Unauthorized downloads sites</li>
+            <li>Non-educational browsing platforms</li>
+          </ul>
+
+          <h3>Screenshot</h3>
+          <p>Website restriction policy applied in Active Directory:</p>
+
+          <img src="../../images/block-websites1.PNG" class="doc-image" alt="Block Websites Policy Screenshot">
+          <img src="../../images/block-websites2.PNG" class="doc-image" alt="Block Websites Policy Screenshot">
+
+        </section>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prevent Temporary Profiles Policy</title>
+  <link rel="icon" type="image/png" href="../../images/title-image.png">
+
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Prevent Temporary Profiles Policy</h1>
+    <p>Computer Configuration Group Policy Documentation</p>
+  </header>
+
+  <main class="main">
+
+    <section class="documentation-section">
+
+      <!-- SIDEBAR (HOME ONLY) -->
+      <aside class="doc-sidebar">
+
+        <h2>Navigation</h2>
+
+        <div class="project-links">
+          <a href="../../index.html">← Back to Home</a>
+        </div>
+
+        <hr>
+
+        <p style="font-size:13px; color:#666;">
+          System stability policy to prevent temporary user profiles.
+        </p>
+
+      </aside>
+
+      <!-- CONTENT -->
+      <div class="doc-content">
+
+        <!-- BACK HOME -->
+        <div class="back-home">
+          <a href="../../index.html">← Back to Home</a>
+        </div>
+
+        <!-- POLICY BLOCK -->
+        <section class="doc-block">
+
+          <h1>Prevent Temporary User Profiles</h1>
+
+          <h3>Purpose</h3>
+          <p>
+            This policy prevents Windows from logging users into temporary profiles.
+            It ensures that users always access their correct profile with full access to settings, files, and configurations.
+          </p>
+
+          <h3>How it works</h3>
+          <p>
+            When enabled, this policy forces Windows to correctly load user profiles from the system or domain.
+            If a profile issue occurs, the system will attempt recovery instead of creating a temporary profile session.
+          </p>
+
+          <h3>How it is applied</h3>
+          <ul>
+            <li>Open Group Policy Management Console (GPMC)</li>
+            <li>Edit the Computer Configuration policy</li>
+            <li>Navigate to: Computer Configuration → Administrative Templates → System → User Profiles</li>
+            <li>Enable policies related to profile loading stability</li>
+            <li>Ensure “Do not log users on with temporary profiles” is enabled</li>
+            <li>Apply changes and run <code>gpupdate /force</code></li>
+          </ul>
+
+          <h3>Impact</h3>
+          <ul>
+            <li>Prevents data loss caused by temporary profiles</li>
+            <li>Ensures consistent user environment</li>
+            <li>Improves login reliability in lab systems</li>
+          </ul>
+
+          <h3>Screenshot</h3>
+          <p>Temporary profile prevention policy in Group Policy Editor:</p>
+
+          <img src="../../images/prevent-temp-profiles.PNG" class="doc-image" alt="Prevent Temporary Profiles Policy Screenshot">
+
+        </section>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
