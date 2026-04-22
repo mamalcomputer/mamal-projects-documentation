@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamal Projects Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="./images/title-image.png">
+    <link rel="stylesheet" href="reset.css">
+    <script defer src="./script.js"></script>
+</head>
+<body>
+
+    <header class="header fixed">
+        <h1>Mamal Projects Documentation Page.</h1>
+        <p>Visit project <a href="https://github.com/mamalcomputer/mamal-projects-documentation" target="_blank">online repository </a></p>
+    </header>
+
+<main class="main">
+
+  <section class="documentation-section">
+
+   <aside class="doc-sidebar">
+
+  <h2>Web App Projects</h2>
+
+  <div class="project-links">
+    <a href="http://10.10.117.11" target="_blank">Mamal Browsing History System</a>
+    <a href="http://10.10.117.76/" target="_blank">Mamal Inventory Tracking System</a>
+    <a href="http://10.10.117.76:9997/" target="_blank">Mamal Students Timing System</a>
+  </div>
+
+  <hr>
+
+<nav class="sidebar-nav">
+
+  <!-- DOMAIN LEVEL -->
+  <details open>
+    <summary>Domain Level Policies</summary>
+    <ul>
+      <li><a href="./gpo/domain_level/allow-powershell.html">Allow PowerShell</a></li>
+      <li><a href="./gpo/domain_level/default-domain-policy.html">Default Domain Policy</a></li>
+      <li><a href="./gpo/domain_level/desktop-wallpaper.html">Desktop Wallpaper</a></li>
+      <li><a href="./gpo/domain_level/firewall-settings.html">Firewall Settings</a></li>
+      <li><a href="./gpo/domain_level/logdata-enquiry.html">Log Data Enquiry</a></li>
+      <li><a href="./gpo/domain_level/mamal-talabaat.html">Mamal Talabaat</a></li>
+      <li><a href="./gpo/domain_level/mamal-talebaat.html">Mamal Talebaat</a></li>
+      <li><a href="./gpo/domain_level/multimedia-permission.html">Multimedia Permission</a></li>
+      <li><a href="./gpo/domain_level/share-mapdrive.html">Share MapDrive</a></li>
+    </ul>
+  </details>
+
+  <!-- MAMAL OU -->
+  <details>
+    <summary>MAMAL OU Policies</summary>
+    <ul>
+      <li><a href="./gpo/mamal_ou/add-chrome-extensions.html">Add Chrome Extensions</a></li>
+      <li><a href="./gpo/mamal_ou/block-websites-edge.html">Block Websites (Edge)</a></li>
+      <li><a href="./gpo/mamal_ou/map-home-drive.html">Map Home Drive</a></li>
+      <li><a href="./gpo/mamal_ou/restrict-incognito.html">Restrict Incognito</a></li>
+    </ul>
+  </details>
+
+  <!-- TALEBAAT -->
+  <details>
+    <summary>Talabaat & Talebaat</summary>
+    <ul>
+      <li><a href="./gpo/talabaat_talebaat/block-downloads.html">Block Downloads</a></li>
+      <li><a href="./gpo/talabaat_talebaat/block-websites.html">Block Websites</a></li>
+      <li><a href="./gpo/talabaat_talebaat/disable-ctrl-alt-del.html">Disable Ctrl+Alt+Del</a></li>
+      <li><a href="./gpo/talabaat_talebaat/folder-redirection.html">Folder Redirection</a></li>
+      <li><a href="./gpo/talabaat_talebaat/install-chrome-extensions.html">Install Chrome Extensions</a></li>
+      <li><a href="./gpo/talabaat_talebaat/lab-client-deployment.html">Lab Client Deployment</a></li>
+      <li><a href="./gpo/talabaat_talebaat/prevent-registry.html">Prevent Registry Editor</a></li>
+      <li><a href="./gpo/talabaat_talebaat/prevent-extension-install.html">Prevent Extension Install</a></li>
+    </ul>
+  </details>
+
+  <!-- COMPUTER OU -->
+  <details>
+    <summary>Computer OU</summary>
+    <ul>
+      <li><a href="./gpo/computer_ou/add-chrome-extensions.html" target="_blank">Add Chrome Extensions</a></li>
+      <li><a href="./gpo/computer_ou/allow-powershell.html" target="_blank">Allow PowerShell</a></li>
+      <li><a href="./gpo/computer_ou/restrict-extensions.html" target="_blank">Restrict Extensions</a></li>
+      <li><a href="./gpo/computer_ou/disable-ctrl-alt-del.html" target="_blank">Disable Ctrl+Alt+Del</a></li>
+      <li><a href="./gpo/computer_ou/prevent-temp-profiles.html" target="_blank">Prevent Temp Profiles</a></li>
+    </ul>
+  </details>
+
+</nav>
+
+</aside>
+
+    <!-- RIGHT SIDE / CONTENT -->
+    <div class="doc-content">
+
+      <section class="doc-block">
+        <h1>Group Policy Management Policies</h1>
+
+        <h3>Powershell Scripts</h3>
+        <p>Automation scripts for managing system policies in lab environments.</p>
+        <p>The following are the group policy object names as applied in the Active Directory.</p>
+
+        <h4>Application Level</h4>
+        <ul>
+          <li>Domain Level Group Policies
+            <ul>
+                <li><a href="./gpo/domain_level/allow-powershell.html" target="_blank">Allow domain users to run powershell scripts</a></li>
+                <li><a href="./gpo/domain_level/default-domain-policy.html" target="_blank">Default Domain Policy.</a></li>
+                <li><a href="./gpo/domain_level/desktop-wallpaper.html" target="_blank">Desktop Wallpaper</a></li>
+                <li><a href="./gpo/domain_level/firewall-settings.html" target="_blank">GPO remote update windows firewall settings</a></li>
+                <li><a href="./gpo/domain_level/logdata-enquiry.html" target="_blank">LogData-Enquiry</a></li>
+                <li><a href="./gpo/domain_level/mamal-talabaat.html" target="_blank">Mamal-Talabaat</a></li>
+                <li><a href="./gpo/domain_level/mamal-talebaat.html" target="_blank">Mamal-Talebaat</a></li>
+                <li><a href="./gpo/domain_level/multimedia-permission.html" target="_blank">Multimedia permission</a></li>
+                <li><a href="./gpo/domain_level/share-mapdrive.html" target="_blank">Share_MapDrive</a></li>
+            </ul>
+          </li>
+
+          <li>MAMAL ORGANIZATION UNIT LEVEL
+            <ul>
+              <li><a href="./gpo/mamal_ou/add-chrome-extensions.html" target="_blank">ADD CHROME EXTENSIONS</a></li>
+              <li><a href="./gpo/mamal_ou/block-websites-edge.html" target="_blank">GROUP-POLICY-Block Internet Websites in Microsoft Edge</a></li>
+              <li><a href="./gpo/mamal_ou/map-home-drive.html" target="_blank">Map Home Drive For Students</a></li>
+              <li><a href="./gpo/mamal_ou/restrict-incognito.html" target="_blank">Restrict Incognito Browsing</a></li>
+            </ul>
+          </li>
+
+          <li>TALABAAT & TALEBAAT ORGANIZATION LEVEL
+            <p>These are policies which are applied inside the Talebaat and Talabaat users</p>
+            <ul>
+              <li><a href="./gpo/talabaat_talebaat/block-downloads.html" target="_blank">Block malicious downloads in browsers</a></li>
+              <li><a href="./gpo/talabaat_talebaat/block-websites.html" target="_blank">Block List of websites which are not allowed in computer lab</a></li>
+              <li><a href="./gpo/talabaat_talebaat/disable-ctrl-alt-del.html" target="_blank">Disable the CTRL+ALT+DELETE options</a></li>
+              <li><a href="./gpo/talabaat_talebaat/folder-redirection.html" target="_blank">Folder Redirection</a></li>
+              <li><a href="./gpo/talabaat_talebaat/install-chrome-extensions.html" target="_blank">GPO TO INSTALL CHROME EXTENSIONS</a></li>
+              <li><a href="./gpo/talabaat_talebaat/lab-client-deployment.html" target="_blank">Lab Client Deployment</a></li>
+              <li><a href="./gpo/talabaat_talebaat/prevent-registry.html" target="_blank">Prevent Registry Editor</a></li>
+              <li><a href="./gpo/talabaat_talebaat/prevent-extension-install.html" target="_blank">Prevent Users from installing chrome extensions</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="doc-block">
+        <h2>Computer Organization Unit Level</h2>
+        <p>Controls applied at OU level for lab machines.</p>
+        <ul>
+          <li><a href="./gpo/computer_ou/add-chrome-extensions.html" target="_blank">ADD CHROME EXTENSIONS</a></li>
+          <li><a href="./gpo/computer_ou/allow-powershell.html" target="_blank">Allow Domain Computers to run powershell scripts</a></li>
+          <li><a href="./gpo/computer_ou/restrict-extensions.html" target="_blank">GPO-Restrict Chrome Extensions (Block *)</a></li>
+          <li><a href="./gpo/computer_ou/disable-ctrl-alt-del.html" target="_blank">GPO-FOR DO NOT REQUIRE CTRL+ALT+DELETE</a></li>
+          <li><a href="./gpo/computer_ou/prevent-temp-profiles.html" target="_blank">Prevent Temp Profiles</a></li>
+        </ul>
+      </section>
+
+    </div>
+
+  </section>
+
+</main>
+
+</body>
+</html>
