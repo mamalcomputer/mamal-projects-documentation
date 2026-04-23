@@ -313,10 +313,9 @@ body {
 /* internet browsing history page */
 .internet-browsing-page{
   background-color: var(--burnt-orange);
-  color: var(--cream-beige);
+  color: #2a032a;
   text-align: center;
-  /* width: 100%;
-  min-height: 100vh; */
+  padding: 0px 0px 10px 0px;
 }
 .internet-browsing-page h1{
   font-size: 18px;
@@ -325,6 +324,23 @@ body {
 .internet-browsing-main{
   text-align: center;
   background-color: var(--cream-beige);
+  min-height:100vh;
+  overflow-x:hidden;
+
+}
+.internet-browsing-page a{
+  text-decoration: none;
+  color: var(--golden-yellow);
+  border: 2px dotted var(--bg);
+  padding: 4px 8px;
+  display: block;
+  margin-top: 15px;
+
+}
+.internet-browsing-page a:hover{
+  background-color: black;
+  color: var(--cream-beige);
+
 }
 
 
