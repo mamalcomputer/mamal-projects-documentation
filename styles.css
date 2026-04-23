@@ -310,6 +310,24 @@ body {
 }
 
 
+/* internet browsing history page */
+.internet-browsing-page{
+  background-color: var(--burnt-orange);
+  color: var(--cream-beige);
+  text-align: center;
+  /* width: 100%;
+  min-height: 100vh; */
+}
+.internet-browsing-page h1{
+  font-size: 18px;
+}
+
+.internet-browsing-main{
+  text-align: center;
+  background-color: var(--cream-beige);
+}
+
+
 
 
 
