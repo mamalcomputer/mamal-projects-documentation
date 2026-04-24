@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log Data Enquiry Policy</title>
+
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Log Data Enquiry Policy</h1>
+    <p>User Configuration Group Policy Documentation</p>
+  </header>
+
+  <main class="main">
+
+    <section class="documentation-section">
+
+      <!-- SIDEBAR -->
+      <aside class="doc-sidebar">
+
+        <h2>Navigation</h2>
+
+        <div class="project-links">
+          <a href="../../index.html">← Back to Home</a>
+        </div>
+
+        <hr>
+
+        <p style="font-size:13px; color:#666;">
+          User activity monitoring and logging policy.
+        </p>
+
+      </aside>
+
+      <!-- CONTENT -->
+      <div class="doc-content">
+
+        <!-- BACK HOME -->
+        <div class="back-home">
+          <a href="../../index.html">← Back to Home</a>
+        </div>
+
+        <!-- POLICY BLOCK -->
+        <section class="doc-block">
+
+          <h1>Log Data Enquiry (User Activity Logging)</h1>
+
+          <h3>Purpose</h3>
+          <p>
+            This policy records user login and logoff activity within the computer lab.
+            It captures essential data such as username, computer name, login time, and logoff time
+            for monitoring, auditing, and administrative analysis.
+          </p>
+
+          <h3>How it works</h3>
+          <p>
+            The policy executes scripts during both logon and logoff events.
+            These scripts collect user session data and store it in a central log file or database
+            for tracking user activity across lab machines.
+          </p>
+
+          <h3>How it is applied</h3>
+          <ul>
+            <li>Open Group Policy Management Console (GPMC)</li>
+            <li>Edit the User Configuration policy</li>
+            <li>Navigate to: User Configuration → Windows Settings → Scripts (Logon/Logoff)</li>
+            <li>Add script for <strong>Logon</strong> (records login time, username, computer)</li>
+            <li>Add script for <strong>Logoff</strong> (records logoff time)</li>
+            <li>Ensure script writes data to a central storage location</li>
+            <li>Apply policy and run <code>gpupdate /force</code></li>
+          </ul>
+
+          <h3>Data Captured</h3>
+          <ul>
+            <li>Username</li>
+            <li>Computer name</li>
+            <li>Login time</li>
+            <li>Logoff time</li>
+          </ul>
+
+          <h3>Impact</h3>
+          <ul>
+            <li>Enables user activity tracking</li>
+            <li>Supports auditing and reporting</li>
+            <li>Improves lab accountability</li>
+            <li>Assists in troubleshooting user sessions</li>
+          </ul>
+
+          <h3>Screenshot</h3>
+          <p>Logon and logoff script configuration in Group Policy:</p>
+
+          <img src="../../images/logDataEnquiry.PNG" class="doc-image" alt="Log Data Enquiry Policy Screenshot">
+
+        </section>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
