@@ -36,11 +36,9 @@ body {
   padding: 14px 20px;
   border-bottom: 3px solid var(--olive-green);
   box-shadow: var(--shadow);
-
   position: sticky;
   top: 0;
   z-index: 1000;
-
   color: white;
 }
 
@@ -79,10 +77,8 @@ body {
   border-radius: var(--radius);
   padding: 16px;
   box-shadow: var(--shadow);
-
   height: calc(100vh - 90px);
   overflow-y: auto;
-
   position: sticky;
   top: 70px;
 }
@@ -337,13 +333,7 @@ body {
 .internet-browsing-page a:hover{
   background-color: black;
   color: var(--cream-beige);
-
 }
-
-
-
-
-
 
 /* =========================
    RESPONSIVE
